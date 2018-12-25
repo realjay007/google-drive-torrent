@@ -3,11 +3,11 @@
 
 const driveCredentials = require('./data/driveCredentials.json');
 
-const DRIVE_CLIENT_ID = driveCredentials.clientId;
-const DRIVE_CLIENT_SECRET = driveCredentials.clientSecret;
+const DRIVE_CLIENT_ID = process.env.DRIVE_CLIENT_ID;
+const DRIVE_CLIENT_SECRET = process.env.DRIVE_CLIENT_SECRET;
 const DRIVE_REDIRECT_URI = process.env.DRIVE_REDIRECT_URI || 'http://localhost:3000/login-callback';
 const DRIVE_RETURN_FIELDS = 'id,name,webViewLink';
-const DRIVE_TORRENT_DIR = 'My torrents';
+const DRIVE_TORRENT_DIR = 'Drive Torrent';
 
 const isProduction = process.env.NODE_ENV == 'production';
 
